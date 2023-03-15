@@ -10,6 +10,7 @@
 
     <Border Padding="10">
         <StackPanel>
+            
             <Grid>
 
                 <Grid.ColumnDefinitions>
@@ -23,6 +24,30 @@
                 <Button Margin="10 0 0 0" Grid.Column="2" Content="Refresh"/>
 
             </Grid>
-        </StackPanel>
+            <TextBlock Text="Pulse Properties" FontWeight="Bold" Margin=" 0 10"/>
+            
+            <TextBlock Text="Description"/>
+            <TextBox Padding="2" />
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+               
+                
+                <StackPanel Grid.Column ="0" Margin="0 0 10 0">
+                     <TextBlock Text="Status"/>
+                     <TextBox IsReadOnly="True" Background="#eee" Padding="2" />
+                </StackPanel>
+        
+                <StackPanel Grid.Column ="1">
+                    <TextBlock Text="Revision"/>
+                    <TextBox Padding="2" />   
+                </StackPanel>
+           
+            </Grid>
+        
+         </StackPanel>
     </Border>
 </Window>
