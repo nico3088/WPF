@@ -6,10 +6,23 @@
         xmlns:local="clr-namespace:Wpf_Bassics"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        <Button Content=" Test"/>
-        <Button Content=" Test"/>
-        <Button Content=" Test"/>
-        <Button Content=" Test"/>
-    </StackPanel>
+
+
+    <Border Padding="10">
+        <StackPanel>
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Content="Apply"/>
+                <Button Grid.Column="1" Content="Reset"/>
+                <Button Grid.Column="2" Content="Refresh"/>
+
+            </Grid>
+        </StackPanel>
+    </Border>
 </Window>
