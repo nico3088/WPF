@@ -24,5 +24,10 @@ namespace Wpf_Bassics
         {
             InitializeComponent();
         }
+
+        private void TextBox_TextChanged()
+        {
+
+        }
     }
 }
