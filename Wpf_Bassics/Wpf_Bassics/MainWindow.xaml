@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Bassics"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="400">
 
 
     <Border Padding="10">
@@ -58,9 +58,59 @@
 
             <!--/Raw Material/-->
             <TextBlock Text="Raw Material" FontWeight="Bold" Margin=" 0 10"/>
-
+            
+            <!--/Material/-->
             <TextBlock Text="Material"/>
             <ComboBox Padding="2"/>
+
+            <!--/Manufacturing info/-->
+            <TextBlock Text="Manufacturing info" FontWeight="Bold" Margin=" 0 10"/>
+
+            <!--/Work Centres/-->
+            <TextBlock Text="Work Centres"/>
+
+            <!--/Checkboxes/-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--/Column 1/-->
+                <StackPanel Grid.Column ="0" Margin="0 0 10 0">
+                    <CheckBox Content="Weld"/>
+                    <CheckBox Content="Assaembly"/>
+                    <CheckBox Content="Plasma"/>
+                    <CheckBox Content="Laser"/>
+                    <CheckBox Content="Purchase"/>
+                </StackPanel>
+
+                <!--/Column 2/-->
+                <StackPanel Grid.Column ="1">
+                    <CheckBox Content="Lathe"/>
+                    <CheckBox Content="Drill"/>
+                    <CheckBox Content="Fold"/>
+                    <CheckBox Content="Roll"/>
+                    <CheckBox Content="Saw"/>
+                </StackPanel>
+
+            </Grid>
+
+            <!--/Lenght/-->
+            <TextBlock Text="Length"/>
+            <TextBox Padding="2" TextChanged="TextBox_TextChanged" />
+
+            <!--/Mass/-->
+            <TextBlock Text="Mass"/>
+            <TextBox IsReadOnly="True" Padding="2" Background="#eee"  />
+
+            <!--/Finish/-->
+            <TextBlock Text="Finish"/>
+            <ComboBox SelectedIndex="0" Padding="2">
+                <ComboBoxItem>Painted</ComboBoxItem>
+                <ComboBoxItem>Not Painted</ComboBoxItem>
+            </ComboBox>
+
 
         </StackPanel>
     </Border>
