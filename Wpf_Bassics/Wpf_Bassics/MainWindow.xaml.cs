@@ -47,7 +47,7 @@ namespace Wpf_Bassics
             var combo = (ComboBox)sender;
             var value = (ComboBoxItem)combo.SelectedValue;
             
-            this.NoteText.Text = (string)value.Content;
+            this.NoteText.Text = (string)value.Content; 
 
         }
     }
