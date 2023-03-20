@@ -20,8 +20,8 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button Margin="0 0 10 0" Grid.Column="0" Content="Apply"/>
-                <Button Grid.Column="1" Content="Reset"/>
+                <Button x:Name="ApplyButton" Click="ApplyButton_Click" Margin="0 0 10 0" Grid.Column="0" Content="Apply" />
+                <Button x:Name="ResetButton" Click="ResetButton_Click"    Grid.Column="1" Content="Reset"/>
                 <Button Margin="10 0 0 0" Grid.Column="2" Content="Refresh"/>
 
                 </Grid>
@@ -30,7 +30,7 @@
 
             <!-- Description -->
             <TextBlock Text="Description"/>
-            <TextBox Padding="2" TextChanged="TextBox_TextChanged" />
+            <TextBox x:Name="DescriptionText" Padding="2" />
             
             <!-- Status and Revision -->
             <Grid>
@@ -78,27 +78,27 @@
 
                 <!--/Column 1/-->
                 <StackPanel Grid.Column ="0" Margin="0 0 10 0">
-                    <CheckBox Content="Weld"/>
-                    <CheckBox Content="Assaembly"/>
-                    <CheckBox Content="Plasma"/>
-                    <CheckBox Content="Laser"/>
-                    <CheckBox Content="Purchase"/>
+                    <CheckBox Unchecked ="Checkbox_cheked" Checked="Checkbox_cheked" x:Name="WeldCheckbox" Content="Weld"/>
+                    <CheckBox Unchecked ="Checkbox_cheked" Checked="Checkbox_cheked" x:Name="PlasmaCheckbox" Content="Plasma"/>                   
+                    <CheckBox Unchecked ="Checkbox_cheked" Checked="Checkbox_cheked" x:Name="AssemblyCheckbox" Content="Assembly"/>                 
+                    <CheckBox Unchecked ="Checkbox_cheked" Checked="Checkbox_cheked" x:Name="LaserCheckbox" Content="Laser"/>                    
+                    <CheckBox Unchecked ="Checkbox_cheked" Checked="Checkbox_cheked" x:Name="PurchaseCheckbox" Content="Purchase"/>
                 </StackPanel>
 
                 <!--/Column 2/-->
                 <StackPanel Grid.Column ="1">
-                    <CheckBox Content="Lathe"/>
-                    <CheckBox Content="Drill"/>
-                    <CheckBox Content="Fold"/>
-                    <CheckBox Content="Roll"/>
-                    <CheckBox Content="Saw"/>
+                    <CheckBox Unchecked ="Checkbox_cheked" Checked="Checkbox_cheked" x:Name="LatheCheckbox" Content="Lathe"/>                    
+                    <CheckBox Unchecked ="Checkbox_cheked" Checked="Checkbox_cheked" x:Name="DrillCheckbox" Content="Drill"/>                    
+                    <CheckBox Unchecked ="Checkbox_cheked" Checked="Checkbox_cheked" x:Name="FoldCheckbox" Content="Fold"/>                     
+                    <CheckBox Unchecked ="Checkbox_cheked" Checked="Checkbox_cheked" x:Name="RollCheckbox" Content="Roll"/>                     
+                    <CheckBox Unchecked ="Checkbox_cheked" Checked="Checkbox_cheked" x:Name="SawCheckbox" Content="Saw"/>
                 </StackPanel>
 
             </Grid>
 
             <!--/Lenght/-->
             <TextBlock Text="Length"/>
-            <TextBox Padding="2" TextChanged="TextBox_TextChanged" />
+            <TextBox x:Name="LengthText" Padding="2" />
 
             <!--/Mass/-->
             <TextBlock Text="Mass"/>
@@ -106,7 +106,7 @@
 
             <!--/Finish/-->
             <TextBlock Text="Finish"/>
-            <ComboBox SelectedIndex="0" Padding="2">
+            <ComboBox SelectionChanged="FinishDropdown_SelectionChanged" x:Name="FinishDropdown" SelectedIndex="0" Padding="2">
                 <ComboBoxItem>Painted</ComboBoxItem>
                 <ComboBoxItem>Not Painted</ComboBoxItem>
             </ComboBox>
@@ -131,7 +131,7 @@
             
             <!--/Note/-->
             <TextBlock Text="Note"/>
-            <TextBox Padding="2" />
+            <TextBox x:Name="NoteText"  Padding="2" />
 
         </StackPanel>
     </Border>
